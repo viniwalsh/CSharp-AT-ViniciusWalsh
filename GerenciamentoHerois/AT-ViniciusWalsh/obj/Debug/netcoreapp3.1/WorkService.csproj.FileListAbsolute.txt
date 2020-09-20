@@ -1,0 +1,11 @@
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\WorkService.exe
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\obj\Debug\netcoreapp3.1\WorkService.AssemblyInfoInputs.cache
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\obj\Debug\netcoreapp3.1\WorkService.AssemblyInfo.cs
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\AT-ViniciusWalsh\obj\Debug\netcoreapp3.1\WorkService.csprojAssemblyReference.cache
