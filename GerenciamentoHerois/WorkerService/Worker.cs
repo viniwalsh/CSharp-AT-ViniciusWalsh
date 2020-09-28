@@ -1,8 +1,10 @@
 using Dominio;
-using Microsoft.Data.Sqlite;
+using Dominio.Comandos;
+using Dominio.Manipuladores;
+using Dominio.ObjetosDeValor;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace WorkerService
 {
-    public class Worker : BackgroundService
+    public class Worker : BackgroundService, IWorker
     {
         private readonly IHeroiRepositorio _repositorio;
         private const string pressioneQualquerTecla = "Pressione qualquer tecla para exibir o menu principal ...";
@@ -59,12 +61,17 @@ namespace WorkerService
             while (opcao != "5");
         }
 
+        public void Iniciar()
+        {
+            throw new NotImplementedException();
+        }
+
         static void ShowMenu()
         {
             Console.Clear();
             try
             {
-                    var lstData = GetHeros();
+                var lstData = UltimosHerois();
                 Console.WriteLine(" -- Nome Completo --|-- Codinome --| -- Lançamento -- | -- Poder --| -- Cadastrado Em:");
                 foreach (var item in lstData)
                 {
@@ -87,11 +94,11 @@ namespace WorkerService
             Console.WriteLine("\nEscolha uma das opções acima: ");
         }
 
-        static void PesquisarHerois()
+        private void PesquisarHerois()
         {
             Console.WriteLine("Informe o nome do Héroi que deseja pesquisar:");
             var termoDePesquisa = Console.ReadLine();
-            var heroisEncontrados = _repositorio.Pesquisar(termoDePesquisa).ToList();
+            var heroisEncontrados = _repositorio.PesquisaCodinome(termoDePesquisa).ToList();
 
             if (heroisEncontrados.Count > 0)
             {
@@ -113,9 +120,6 @@ namespace WorkerService
                     Console.WriteLine($"Nome do Héroi: {heroi.NomeCodinome()}");
                     Console.WriteLine($"Data de Criação: {heroi.Nascimento:dd/MM/yyyy}");
                     Console.WriteLine($"Poder do Héroi: {heroi.Poder}");
-
-                    var qtdeDiasParaOProximoAniversario = heroi.ObterQtdeDeDiasParaOProximoAniversario();
-                    Console.Write(ObterMensagemAniversario(qtdeDiasParaOProximoAniversario));
                 }
             }
             else
@@ -124,7 +128,7 @@ namespace WorkerService
             }
         }
 
-        static void AdicionarHeroi()
+        private void AdicionarHeroi(HeroisManupulador manupulador)
         {
             Console.WriteLine("Informe o nome do Héroi que deseja adicionar:");
             var nomeCompleto = Console.ReadLine();
@@ -163,22 +167,7 @@ namespace WorkerService
 
             if (opcaoParaAdicionar == "1")
             {
-                using (var connection = new SqliteConnection("DataSocurce=Herois.db"))
-                {
-                    //Montagem da query para adicionar novo Heroi
-                    var command = connection.CreateCommand();
-                    string query = "INSERT INTO Herois(HeroisID, NomeCompleto, Codinome, Nascimento, Poder, DataCadastro)"
-                        + " VALUES(" + nomeCompleto + "'" + ","
-                        + "'" + codinome + "'" + ","
-                        + "'" + Nascimento + "'" + ","
-                        + "'" + poderEnum + "'" + ","
-                        + DataCadastro
-                        + ");";
-
-                    command.CommandText = query;
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                }
+                _repositorio.NovoHeroi(termoDePesquisa).ToList();
                 Console.Write($"Héroi adicionado com sucesso! ");
             }
             else if (opcaoParaAdicionar == "2")
@@ -191,7 +180,7 @@ namespace WorkerService
             }
         }
 
-        static void AlterarHeroi()
+        private void AlterarHeroi()
         {
             Console.WriteLine("Informe o nome do Héroi que deseja alterar:");
             var nomeCompleto = Console.ReadLine();
@@ -228,7 +217,7 @@ namespace WorkerService
 
             if (opcaoParaAdicionar == "1")
             {
-                using (var connection = new SqliteConnection("DataSocurce=Herois.db"))
+                using (var connection = new SQLiteConnection("DataSocurce=Herois.db"))
                 {
                     //Montagem da query para adicionar novo Heroi
                     var command = connection.CreateCommand();
@@ -237,7 +226,7 @@ namespace WorkerService
                     + "Codinome = '" + codinome + "'" + ","
                     + "Nascimento = '" + dataNascimento + "'" + ","
                     + "Poder = '" + poderEnum + "'" + ","
-                    + "WHERE NomeCompleto =" nomeCompleto + ";";
+                    + "WHERE NomeCompleto =" + nomeCompleto + ";";
 
                     command.CommandText = query;
                     connection.Open();
@@ -255,60 +244,33 @@ namespace WorkerService
             }
         }
 
-        static void ExcluirHeroi()
+        private void ExcluirHeroi(Guid id, string nomeCompleto)
         {
-
-            Console.WriteLine("Informe o nome do Héroi que deseja excluir:");
-            var nomeCompleto = Console.ReadLine();
-            using (var connection = new SqliteConnection("DataSocurce=Herois.db"))
-            {
-                //Montagem da query para deletar Heroi
-                var command = connection.CreateCommand();
-                string query = "DELETE FROM Herois WHERE nomeCompleto =" nomeCompleto + ";";
-
-                command.CommandText = query;
-                connection.Open();
-                command.ExecuteNonQuery();
-            }
+            Console.WriteLine("Informe o codinome do Héroi que deseja excluir:");
+            var comando = new RemoverHeroiComando(id, nomeCompleto);
+            var manipulador = new HeroisManupulador(_repositorio);
+            var resultado = manipulador.Manupulador.ExcluirHeroi(comando);
         }
 
-        static List<Herois> GetHeros()
+        private void UltimosHerois(string codenome, bool done)
         {
-            List<Herois> lstHeroi = new List<Herois>();
-            using (var connection = new SqliteConnection("DataSocurce=Herois.db"))
-            {
-                //Montagem da query para deletar Heroi
-                var command = connection.CreateCommand();
-                string query = "Select * FROM Herois;";
-
-                command.CommandText = query;
-                connection.Open();
-
-                var reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Herois s = new Herois();
-                    s.HeroiID = Convert.ToInt32(reader["HeroiID"]);
-                    s.nomeCompleto = Convert.ToString(reader["NomeCompleto"]);
-                    s.Codinome = Convert.ToString(reader["Codinome"]);
-                    s.Nascimento = Convert.ToString(reader["Nascimento"]);
-                    s.DataCadastro = Convert.ToString(reader["DataCadastro"]);
-                    lstHeroi.Add(s);
-                }
-
-                return lstHeroi;
-                }
-            }
+            _repositorio.MostrarUltimosHeroisRegistrados(c)
         }
 
-        static string ObterMensagemAniversario(double qtdeDias)
+        private static void MostrarResultado(string resultado)
         {
-            if (double.IsNegative(qtdeDias))
-                return $"Este Héroi já fez aniversário neste ano! ";
-            else if (qtdeDias.Equals(0d))
-                return $"Este Héroi faz aniversário hoje! ";
+            if(resultado.Contains("ERRO!"))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(resultado);
+                Console.ResetColor();
+            }
             else
-                return $"Faltam {qtdeDias:N0} dia(s) para o aniversário deste Héroi! ";
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nResultado: " + resultado);
+                Console.ResetColor();
+            }
         }
     }
 }

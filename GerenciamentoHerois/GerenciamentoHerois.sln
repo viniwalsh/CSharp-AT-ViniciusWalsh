@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentação", "Apresenta
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domínio", "Domínio", "{0AAB7422-9D5D-49F1-A2AB-B096D4175934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{BEF06E07-392D-4D92-9CBF-31FC11729474}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dominio", "Dominio\Dominio.csproj", "{BEF06E07-392D-4D92-9CBF-31FC11729474}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{8206F0C3-69F8-4416-B10F-12E97A626703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{200C61E2-A9F2-4407-B530-63A6779F0293}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{200C61E2-A9F2-4407-B530-63A6779F0293}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService", "WorkerService\WorkerService.csproj", "{A2031EAC-69AB-4245-A1D3-A8E808CB3924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService", "WorkerService\WorkerService.csproj", "{A2031EAC-69AB-4245-A1D3-A8E808CB3924}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BEF06E07-392D-4D92-9CBF-31FC11729474} = {BEF06E07-392D-4D92-9CBF-31FC11729474}
 		{200C61E2-A9F2-4407-B530-63A6779F0293} = {200C61E2-A9F2-4407-B530-63A6779F0293}

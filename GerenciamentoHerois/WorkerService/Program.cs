@@ -1,9 +1,8 @@
 using Dominio;
-using Infraestrutura;
-using Microsoft.Extensions.Configuration;
+using Dominio.Manipuladores;
+using Infraestrutura.Contextos;
+using Infraestrutura.Repositorios;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
 
 namespace WorkerService
 {
@@ -11,27 +10,15 @@ namespace WorkerService
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-        }
+            var services = new ServiceCollection();
+            services.AddDbContext<HeroiContexto>(ServiceLifetime.Scoped);
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureServices((hostContext, services) =>
-                {
-                    var configRepositorio = hostContext.Configuration.GetValue<string>("AppSettings:configRepositorio");
+            services.AddTransient<IHeroiRepositorio, HeroiRepositorio>();
+            services.AddTransient<HeroisManupulador, HeroisManupulador>();
 
-                    services.AddSingleton<IHeroiRepositorio>(provider => DefinirRepositorioInstancia(configRepositorio));
-                    services.AddHostedService<Worker>();
-                });
-
-        private static IHeroiRepositorio DefinirRepositorioInstancia(string configRepositorio)
-        {
-            if (configRepositorio == "AmigoRepositorioLinkedList")
-                return new HeroiRepositorioLinkedList();
-            else if (configRepositorio == "AmigoRepositorioList")
-                return new HeroiRepositorioList();
-            else
-                throw new NotImplementedException("Não existe implementação de repositório para configuração existente.");
+            var serviceProvider = services.BuildServiceProvider();
+            var startarAplicacao = serviceProvider.GetRequiredService<IWorker>();
+            startarAplicacao.Iniciar();
         }
     }
 }

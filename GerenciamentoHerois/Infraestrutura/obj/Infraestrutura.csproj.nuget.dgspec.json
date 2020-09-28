@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj": {}
+    "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\Vinicius Walsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\Sciensa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Vinicius Walsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sciensa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "flunt": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,20 +62,17 @@
         }
       }
     },
-    "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj": {
+    "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj",
+        "projectUniqueName": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj",
         "projectName": "Infraestrutura",
-        "projectPath": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj",
-        "packagesPath": "C:\\Users\\Vinicius Walsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Infraestrutura\\obj\\",
+        "projectPath": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Infraestrutura\\Infraestrutura.csproj",
+        "packagesPath": "C:\\Users\\Sciensa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Infraestrutura\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Vinicius Walsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sciensa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Dominio\\Dominio.csproj"
+              "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -99,6 +99,32 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

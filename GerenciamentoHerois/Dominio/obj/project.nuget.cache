@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mDc7yWJj/4hB1tHgFADSDWdANJsrSIY3c4Vmy7VInUBkQKT+tOl90lRxgeRleHny0H19tglHzb2tdcRB2rMpCw==",
+  "dgSpecHash": "GSma09aur2uj+vLhn+8oKhcqDMyz7fK3U3QrJeiXtZ8V5OXowbLuM83S7Z82gUbWld8EGQhoTk7j1d+UwBw4Kg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vinicius Walsh\\source\\repos\\GerenciamentoHerois\\Dominio\\Dominio.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Sciensa\\Documents\\GitHub\\CSharp-AT-ViniciusWalsh\\GerenciamentoHerois\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sciensa\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
