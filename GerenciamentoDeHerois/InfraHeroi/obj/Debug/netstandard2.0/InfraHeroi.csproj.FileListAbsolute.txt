@@ -1,0 +1,12 @@
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\bin\Debug\netstandard2.0\InfraHeroi.deps.json
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\bin\Debug\netstandard2.0\InfraHeroi.dll
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\bin\Debug\netstandard2.0\InfraHeroi.pdb
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\bin\Debug\netstandard2.0\HeroiModel.dll
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\bin\Debug\netstandard2.0\HeroiModel.pdb
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\obj\Debug\netstandard2.0\InfraHeroi.csprojAssemblyReference.cache
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\obj\Debug\netstandard2.0\InfraHeroi.AssemblyInfoInputs.cache
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\obj\Debug\netstandard2.0\InfraHeroi.AssemblyInfo.cs
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\obj\Debug\netstandard2.0\InfraHeroi.csproj.CoreCompileInputs.cache
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\obj\Debug\netstandard2.0\InfraHeroi.csproj.CopyComplete
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\obj\Debug\netstandard2.0\InfraHeroi.dll
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\InfraHeroi\obj\Debug\netstandard2.0\InfraHeroi.pdb

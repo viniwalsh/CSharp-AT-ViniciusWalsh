@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FUvTQvA3hqgsW4/44nf6R5akpmQ0wyIKXac2TDCqmhHZ1hbxC8+lVpKJsT8Cj4kIlNbuxfpvlH5+QqQUycBR3g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vinicius Walsh\\Desktop\\AT-Fundamentos-ViniciusWalsh\\GerenciamentoDeHerois\\GerenciamentoDeHerois\\GerenciamentoDeHerois.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vinicius Walsh\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

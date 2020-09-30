@@ -1,4 +1,0 @@
-C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\Dominio\obj\Debug\netcoreapp3.1\Dominio.csprojAssemblyReference.cache
-C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
-C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
-C:\Users\Vinicius Walsh\source\repos\GerenciamentoHerois\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache

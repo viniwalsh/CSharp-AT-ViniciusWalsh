@@ -1,4 +1,0 @@
-C:\Users\Vinicius Walsh\Documents\Dotnet\Desenvolvimento com C#\CSharp-AT-ViniciusWalsh\GerenciamentoHerois\Infraestrutura\obj\Debug\netcoreapp3.1\Infraestrutura.csprojAssemblyReference.cache
-C:\Users\Vinicius Walsh\Documents\Dotnet\Desenvolvimento com C#\CSharp-AT-ViniciusWalsh\GerenciamentoHerois\Infraestrutura\obj\Debug\netcoreapp3.1\Infraestrutura.AssemblyInfoInputs.cache
-C:\Users\Vinicius Walsh\Documents\Dotnet\Desenvolvimento com C#\CSharp-AT-ViniciusWalsh\GerenciamentoHerois\Infraestrutura\obj\Debug\netcoreapp3.1\Infraestrutura.AssemblyInfo.cs
-C:\Users\Vinicius Walsh\Documents\Dotnet\Desenvolvimento com C#\CSharp-AT-ViniciusWalsh\GerenciamentoHerois\Infraestrutura\obj\Debug\netcoreapp3.1\Infraestrutura.csproj.CoreCompileInputs.cache

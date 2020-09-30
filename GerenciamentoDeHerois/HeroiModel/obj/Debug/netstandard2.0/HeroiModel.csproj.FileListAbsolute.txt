@@ -1,0 +1,9 @@
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\bin\Debug\netstandard2.0\HeroiModel.deps.json
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\bin\Debug\netstandard2.0\HeroiModel.dll
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\obj\Debug\netstandard2.0\HeroiModel.csprojAssemblyReference.cache
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\obj\Debug\netstandard2.0\HeroiModel.AssemblyInfoInputs.cache
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\obj\Debug\netstandard2.0\HeroiModel.AssemblyInfo.cs
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\bin\Debug\netstandard2.0\HeroiModel.pdb
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\obj\Debug\netstandard2.0\HeroiModel.csproj.CoreCompileInputs.cache
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\obj\Debug\netstandard2.0\HeroiModel.dll
+C:\Users\Vinicius Walsh\Desktop\AT-Fundamentos-ViniciusWalsh\GerenciamentoDeHerois\HeroiModel\obj\Debug\netstandard2.0\HeroiModel.pdb
